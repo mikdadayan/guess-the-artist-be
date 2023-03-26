@@ -65,19 +65,3 @@ export const finishGame = async (
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
-
-export const getTopPlayers = async (req: Request, res: Response) => {
-  try {
-    // Get the top 3 players based on score
-    const users = await User.find({ score: { $gt: 0 } })
-      .sort({ score: "desc" })
-      .limit(3)
-      .select({ _id: 0, username: 1, score: 1 });
-
-    // Send the users array in the response
-    res.status(200).json({ users });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
-};

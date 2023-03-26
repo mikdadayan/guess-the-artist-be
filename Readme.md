@@ -4,8 +4,9 @@
 
 1. `git clone git@github.com:mikdadayan/guess-the-artist-be.git`
 2. `cd REPO_NAME`
-3. `npm install`
-4. `npm run dev`
+3. change the `.env-local` file name to `.env`
+4. `npm install`
+5. `npm run dev`
 
 ### In this project used MongoDB Atlas
 
