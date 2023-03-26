@@ -43,7 +43,7 @@ exports.login = exports.signup = void 0;
 var jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 var bcryptjs_1 = __importDefault(require("bcryptjs"));
 var User_1 = __importDefault(require("../../models/User"));
-var JWT_SECRET = process.env.JWT_SECRET || "secure-secret-access";
+var JWT_SECRET = process.env.JWT_SECRET || "LNOACMOfYvwswDFlUDkJtznZVMie6TjM";
 var TOKEN_EXPIRATION_TIME = "1h";
 var signup = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var _a, username, password, existingUser, hashedPassword, newUser, token, error_1;

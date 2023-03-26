@@ -39,7 +39,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getTopPlayers = exports.finishGame = exports.startGame = void 0;
+exports.finishGame = exports.startGame = void 0;
 var helper_1 = require("../../utils/helper");
 var User_1 = __importDefault(require("../../models/User"));
 var ARTISTS = [
@@ -121,28 +121,4 @@ var finishGame = function (req, res) { return __awaiter(void 0, void 0, void 0, 
     });
 }); };
 exports.finishGame = finishGame;
-var getTopPlayers = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var users, error_3;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                _a.trys.push([0, 2, , 3]);
-                return [4, User_1.default.find({ score: { $gt: 0 } })
-                        .sort({ score: "desc" })
-                        .limit(3)
-                        .select({ _id: 0, username: 1, score: 1 })];
-            case 1:
-                users = _a.sent();
-                res.status(200).json({ users: users });
-                return [3, 3];
-            case 2:
-                error_3 = _a.sent();
-                console.error(error_3);
-                res.status(500).json({ message: "Internal Server Error" });
-                return [3, 3];
-            case 3: return [2];
-        }
-    });
-}); };
-exports.getTopPlayers = getTopPlayers;
 //# sourceMappingURL=gameController.js.map

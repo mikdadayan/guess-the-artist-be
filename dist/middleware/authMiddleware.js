@@ -41,7 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.authMiddleware = void 0;
 var jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-var JWT_SECRET = process.env.JWT_SECRET || "secure-secret-access";
+var JWT_SECRET = process.env.JWT_SECRET || "LNOACMOfYvwswDFlUDkJtznZVMie6TjM";
 var authMiddleware = function (req, res, next) { return __awaiter(void 0, void 0, void 0, function () {
     var token, payload;
     return __generator(this, function (_a) {
