@@ -1,4 +1,4 @@
-# Guess The Artist Back End
+# Guess The Artist's Back End
 
 ### To run this project
 
